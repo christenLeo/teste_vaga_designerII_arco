@@ -10,15 +10,26 @@ root {
 
 /* GENERAL-STYLE */
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.basic_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
 }
 
 .basic_text {
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .buttons {
-
+    border-radius: 8px;
+    text-transform: uppercase;
+    padding: 8px;
+    background-color: transparent;
 }
 
 .labels {
@@ -103,6 +114,7 @@ body {
 
 .hide {
     transition: ease-in-out 2500;
+    opacity: 0;
     display: none;
 }
 
