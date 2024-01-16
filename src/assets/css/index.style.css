@@ -1,1 +1,125 @@
-/* Saving */
+/* VARIABLES */
+root {
+    --base-highlight-orange: #FD4A2E;
+    --base-background-grey: #AEB7C9;
+    --base-text-white: #FFFFFF;
+    --base-title-blue: #001236;
+    --base-text-black: #000000;
+}
+/* --------- */
+
+/* GENERAL-STYLE */
+body {
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.basic_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+.basic_text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.buttons {
+    border-radius: 8px;
+    text-transform: uppercase;
+    padding: 8px;
+    background-color: transparent;
+}
+
+.labels {
+
+}
+
+.inputs {
+
+}
+
+/* --------- */
+
+/* HEADER */
+.header {
+
+}
+
+.header_button{
+
+}
+
+/* --------- */
+
+/* MAIN-SECTION */
+.main_section {
+
+}
+
+/* LANDING-PAGE */
+.main_section_init {
+
+}
+
+.main_section_init_button {
+
+}
+
+/* --------- */
+
+/* GAME-PAGE */
+.main_section_game {
+
+}
+
+.main_section_game_form {
+
+}
+
+.main_section_game_form_cases {
+
+}
+
+.main_section_game_form_answers {
+
+}
+
+.main_section_game_form_button {
+
+}
+
+/* --------- */
+
+/* END-PAGE */
+.main_section_end {
+
+}
+
+.main_section_end_button {
+
+}
+
+/* --------- */
+
+/* --------- */
+
+/* TOGGLES */
+.show {
+    transition: ease-in-out 2800; 
+    display: show;
+    opacity: 1;
+}
+
+.hide {
+    transition: ease-in-out 2500;
+    opacity: 0;
+    display: none;
+}
+
+/* --------- */
+
+/* BREAK-POINTS */
+
+/* --------- */
