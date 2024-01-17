@@ -1,104 +1,127 @@
 /* VARIABLES */
-root {
-    --base-highlight-orange: #FD4A2E;
-    --base-background-grey: #AEB7C9;
-    --base-text-white: #FFFFFF;
-    --base-title-blue: #001236;
-    --base-text-black: #000000;
+
+:root {
+  --base-highlight-orange: #fd4a2e;
+  --base-background-grey: #aeb7c9;
+  --base-text-white: #ffffff;
+  --base-title-blue: #001236;
+  --base-text-black: #000000;
 }
 /* --------- */
 
 /* GENERAL-STYLE */
+
 body {
-    overflow-x: hidden;
-    text-align: center;
+  overflow-x: hidden;
+  text-align: center;
+  background: url("../images/background.png");
+  background-size: cover;
+  background-position: 60%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--base-background-grey);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 65%;
 }
 
 .basic_title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: var(--base-title-blue);
 }
 
 .basic_text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: var(--base-text-black);
 }
 
 .buttons {
-    border-radius: 8px;
-    text-transform: uppercase;
-    padding: 8px;
-    background-color: transparent;
+  border-radius: 14px;
+  text-transform: uppercase;
+  padding: 8px;
+  background-color: transparent;
+  box-shadow: none;
+  border-color: var(--base-highlight-orange);
+  background-color: var(--base-title-blue);
+  color: var(--base-highlight-orange);
+  font-weight: bold;
 }
 
 .labels {
-
 }
 
 .inputs {
-
 }
 
 /* --------- */
 
 /* HEADER */
-.header {
 
+.header {
+  position: relative;
+  height: 60px;
 }
 
-.header_button{
-
+.header_button {
+  position: absolute;
+  right: 8px;
+  top: 6px;
 }
 
 /* --------- */
 
 /* MAIN-SECTION */
-.main_section {
 
+.main_section {
 }
 
 /* LANDING-PAGE */
-.main_section_init {
 
+.main_section_init {
 }
 
 .main_section_init_button {
-
 }
 
 /* --------- */
 
 /* GAME-PAGE */
-.main_section_game {
 
+.main_section_game {
 }
 
 .main_section_game_form {
-
 }
 
 .main_section_game_form_cases {
-
 }
 
 .main_section_game_form_answers {
-
 }
 
 .main_section_game_form_button {
-
 }
 
 /* --------- */
 
 /* END-PAGE */
-.main_section_end {
 
+.main_section_end {
 }
 
 .main_section_end_button {
-
 }
 
 /* --------- */
@@ -106,20 +129,45 @@ body {
 /* --------- */
 
 /* TOGGLES */
+
 .show {
-    transition: ease-in-out 2800; 
-    display: show;
-    opacity: 1;
+  transition: ease-in-out 2800;
+  display: show;
+  opacity: 1;
 }
 
 .hide {
-    transition: ease-in-out 2500;
-    opacity: 0;
-    display: none;
+  transition: ease-in-out 2500;
+  opacity: 0;
+  display: none;
 }
 
 /* --------- */
 
 /* BREAK-POINTS */
+
+/* TABLET */
+
+@media screen and (min-width: 700px) {
+    body::before {
+        width: 80vw;
+        height: 82vh;
+        right: 10%;
+        left: 9%;
+        top: 10%;
+        bottom: 10%;
+        border: solid var(--base-highlight-orange) 5px;
+        border-radius: 15px;
+    }
+
+}
+
+/* --------- */
+
+/* LAPTOP */
+
+/* --------- */
+
+/* DESKTOP */
 
 /* --------- */
