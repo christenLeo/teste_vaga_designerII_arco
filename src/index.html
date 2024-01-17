@@ -14,12 +14,10 @@
     </header>
 
     <main class="main_section">
-      <section class="main_section_init show">
-        <h1 class="basic_title">Some Title</h1>
+      <section class="main_section_init hide">
+        <h1 class="basic_title">Jogo das falácias</h1>
         <p class="basic_text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae
-          quae totam, eius optio dicta quaerat earum delectus! Labore veritatis
-          modi corporis nulla ratione impedit magnam nobis, maiores harum aut!
+          Relacione as frases a suas respectivas falácias lógicas.
         </p>
 
         <button class="buttons main_section_init_button">Iniciar</button>
@@ -27,43 +25,59 @@
 
       <section class="main_section_game hide">
         <form class="main_section_game_form">
-          <fieldset class="main_section_game_form_cases">
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-          </fieldset>
 
-          <fieldset class="main_section_game_form_answers">
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-            <label class="labels">
-              <input class="inputs" type="checkbox" name="" id="" />
-              <p class="basic_text">Lorem ipsum dolor sit, amet consectetur</p>
-            </label>
-          </fieldset>
+          <div class="main_section_game_form_options_wrapper">
+            <fieldset class="main_section_game_form_cases">
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">
+                  Ah, se a maioria acha que é verdade, então deve mesmo ser
+                  verdade!
+                </p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">
+                  Você viu aquela atriz famosa que fez propaganda daquele
+                  hidratante? Com certeza deve ser ótimo!
+                </p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">
+                  Professora, por favor, preciso passar de ano! Eu não fui bem
+                  na prova aquele dia porque eu tive um pesadelo! Você já teve
+                  um pesadelo? Viu como é horrível? Então! Eu preciso de nota,
+                  professora, por favor!
+                </p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">
+                  Se você não concordar comigo eu vou te bater, ouviu bem?
+                </p>
+              </label>
+            </fieldset>
+
+            <fieldset class="main_section_game_form_answers">
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">Recurso à força.</p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">Argumento por apelo à piedade.</p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">Recurso à autoridade.</p>
+              </label>
+              <label class="labels">
+                <input class="inputs" type="checkbox" name="" id="" />
+                <p class="basic_text">Argumento por apelo ao povo.</p>
+              </label>
+            </fieldset>
+          </div>
 
           <button class="buttons main_section_game_form_button">
             Verificar
@@ -71,12 +85,14 @@
         </form>
       </section>
 
-      <section class="main_section_end hide">
-        <p class="basic_text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae
-          quae totam, eius optio dicta quaerat earum delectus! Labore veritatis
-          modi corporis nulla ratione impedit magnam nobis, maiores harum aut!
-        </p>
+      <section class="main_section_end show">
+        <h1 class="basic_title main_section_end_title">
+            Seu resultado foi...
+        </h1>
+
+        <h2 class="basic_text">
+          3 de 4
+        </h2>
 
         <button class="buttons main_section_end_button">Reiniciar</button>
       </section>
