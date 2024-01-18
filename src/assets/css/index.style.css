@@ -60,6 +60,7 @@ body::before {
   background-color: var(--base-title-blue);
   color: var(--base-highlight-orange);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .buttons:hover {
@@ -242,6 +243,7 @@ body::before {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+
   }
 
   .main_section_game_form_answers > .labels {
