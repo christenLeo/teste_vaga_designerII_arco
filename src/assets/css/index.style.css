@@ -242,19 +242,19 @@ body::before {
   }
 
   .main_section_game_form_cases {
-    width: 70%;
+    width: 75%;
     margin-top: 10%;
   }
 
   .main_section_game_form_answers {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
 
   .main_section_game_form_answers > .labels {
-    width: 46%;
+    width: 47%;
   }
 
   .main_section_end > .basic_text {
@@ -298,10 +298,10 @@ body::before {
   }
 
   .main_section_game_form_answers {
-    max-width: 300px;
+    max-width: 350px;
     box-sizing: border-box;
-    height: 473px;
-    margin: 73px 0 0 16px;
+    height: 475px;
+    margin: 75px 0 0 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -309,7 +309,7 @@ body::before {
   }
 
   .main_section_game_form_answers > .labels {
-      width: 300px;
+      width: 350px;
       height: fit-content;
       margin: 0;
   }
