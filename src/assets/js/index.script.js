@@ -31,18 +31,27 @@ const startGame = () => {
 };
 
 const verifyGame = () => {
+  let right = 0;
+  let wrong = 0;
+  const answerTemplate = ["A-4", "B-3", "C-2", "D-1"];
+
+  answerTemplate.forEach((answer) => {
+    if (results.includes(answer)) {
+      right++;
+    } else {
+      wrong++;
+    }
+  });
+
+  console.log("Right: ", right, "\n", "Wrong: ", wrong);
+
   sectionGame.classList.replace("show", "hide");
   document.body.style.height = "100vh";
   sectionEnd.classList.replace("hide", "show");
 };
 
 const restartGame = () => {
-  sectionEnd.classList.replace("show", "hide");
-  document.body.style.height = isMobile(window.innerHeight, window.innerWidth)
-    ? "100%"
-    : "100vh";
-  sectionGame.classList.replace("hide", "show");
-  return;
+  window.location.reload();
 };
 
 const chooseCase = (_caseInput) => {
@@ -54,15 +63,10 @@ const chooseAnswer = (answer) => {
 
   const [answerTitle] = answer.getElementsByClassName("basic_title");
 
-  answer.addEventListener("click", () => {
+  if (answerTitle.innerText === "--.") {
     answerTitle.innerText = `${currentCase}.`;
-
-    console.log(labelInput, answerInput);
     results.push(`${currentCase}-${answerInput.value}`);
-
-    console.log(results);
-    // console.log(results)
-  });
+  }
 };
 
 labels.forEach((label, index) => {
@@ -80,8 +84,6 @@ labels.forEach((label, index) => {
     cases.forEach((_case) => {
       const [_caseInput] = _case.getElementsByClassName("inputs");
 
-      labelInput.checked = true
-
       if (_caseInput !== labelInput) {
         _case.style.background = "gray";
         _case.disabled = true;
@@ -89,14 +91,14 @@ labels.forEach((label, index) => {
       } else {
         _case.style.background = "white";
         chooseCase(_caseInput);
-        console.log(currentCase)
       }
     });
   });
 });
 
-console.log("cases", cases);
-console.log("answers", answers);
+answers.forEach((answer) => {
+  answer.addEventListener("click", () => chooseAnswer(answer));
+});
 
 buttonInit.addEventListener("click", startGame);
 
