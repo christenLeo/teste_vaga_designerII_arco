@@ -45,6 +45,31 @@ const verifyGame = () => {
 
   console.log("Right: ", right, "\n", "Wrong: ", wrong);
 
+  const [sectionEndTextElement] =
+    sectionEnd.getElementsByClassName("basic_text");
+  let finalText = "";
+
+
+
+  if (results.length < 4) {
+    finalText =
+      "Você precisa responder todas as questões, por gentileza reinicie o jogo e tente outra vez";
+  }
+
+  if (right === 4 && wrong === 0) {
+    finalText = `Parabéns, você gabaritou!\n${right} acertos de 4 questões`;
+  }
+
+  if (right >= wrong) {
+    finalText = `Quase lá, vamos estudar um pouco mais e na próxima você consegue!\n${right} acertos de 4 questões`;
+  }
+
+  if (right < wrong) {
+    finalText = `Eu sinto muito mas você precisa estudar mais e pedir ajuda caso esteja tendo dificuldades com esse tema.\n${right} acertos de 4 questões`;
+  }
+
+  sectionEndTextElement.innerText = finalText;
+
   sectionGame.classList.replace("show", "hide");
   document.body.style.height = "100vh";
   sectionEnd.classList.replace("hide", "show");
@@ -64,8 +89,12 @@ const chooseAnswer = (answer) => {
   const [answerTitle] = answer.getElementsByClassName("basic_title");
 
   if (answerTitle.innerText === "--.") {
-    answerTitle.innerText = `${currentCase}.`;
-    results.push(`${currentCase}-${answerInput.value}`);
+    if (currentCase === undefined) {
+      answerTitle.innerText = "--.";
+    } else {
+      answerTitle.innerText = `${currentCase}.`;
+      results.push(`${currentCase}-${answerInput.value}`);
+    }
   }
 };
 
