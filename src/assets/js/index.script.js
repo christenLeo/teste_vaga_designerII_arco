@@ -1,9 +1,12 @@
 const buttonInit = document.querySelector("#buttonInit");
 const buttonEnd = document.querySelector("#buttonEnd");
 const buttonRestart = document.querySelector("#buttonRestart");
+const buttonCredits = document.querySelector("#buttonCredits");
+const buttonGoBack = document.querySelector("#buttonGoBack");
 const sectionInit = document.querySelector("#sectionInit");
 const sectionGame = document.querySelector("#sectionGame");
 const sectionEnd = document.querySelector("#sectionEnd");
+const sectionCredits = document.querySelector("#sectionCredits");
 const gameForm = document.querySelector("#gameForm");
 const labels = document.querySelectorAll(".labels");
 
@@ -27,7 +30,6 @@ const startGame = () => {
     ? "100%"
     : "100vh";
   sectionGame.classList.replace("hide", "show");
-  return;
 };
 
 const verifyGame = () => {
@@ -48,8 +50,6 @@ const verifyGame = () => {
   const [sectionEndTextElement] =
     sectionEnd.getElementsByClassName("basic_text");
   let finalText = "";
-
-
 
   if (results.length < 4) {
     finalText =
@@ -77,6 +77,14 @@ const verifyGame = () => {
 
 const restartGame = () => {
   window.location.reload();
+};
+
+const goToCredits = () => {
+  sectionInit.classList.replace("show", "hide");
+  document.body.style.height = isMobile(window.innerHeight, window.innerWidth)
+    ? "100%"
+    : "100vh";
+  sectionCredits.classList.replace("hide", "show");
 };
 
 const chooseCase = (_caseInput) => {
@@ -134,3 +142,7 @@ buttonInit.addEventListener("click", startGame);
 buttonEnd.addEventListener("click", verifyGame);
 
 buttonRestart.addEventListener("click", restartGame);
+
+buttonCredits.addEventListener("click", goToCredits);
+
+buttonGoBack.addEventListener("click", restartGame);

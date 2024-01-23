@@ -9,42 +9,49 @@
     <title>Jogo da falácias</title>
   </head>
   <body>
-    <header class="header">
-      <button class="buttons header_button">Créditos</button>
-    </header>
-
     <main class="main_section">
       <section id="sectionInit" class="main_section_init show">
+        <button id="buttonCredits" class="buttons header_button">
+          Créditos
+        </button>
         <h1 class="basic_title">Jogo das falácias</h1>
         <p class="basic_text">
           Relacione as frases a suas respectivas falácias lógicas.
         </p>
 
-        <button id="buttonInit" class="buttons main_section_init_button">Iniciar</button>
+        <button id="buttonInit" class="buttons main_section_init_button">
+          Iniciar
+        </button>
       </section>
 
       <section id="sectionGame" class="main_section_game hide">
-        <form onsubmit="return false" id="gameForm" class="main_section_game_form">
-
+        <form
+          onsubmit="return false"
+          id="gameForm"
+          class="main_section_game_form"
+        >
           <div class="main_section_game_form_options_wrapper">
             <fieldset class="main_section_game_form_cases">
               <label class="labels">
-                <input class="inputs" type="checkbox" name="" id="" value="A"/>
-                <span class="basic_title">A.</span><p class="basic_text">
+                <input class="inputs" type="checkbox" name="" id="" value="A" />
+                <span class="basic_title">A.</span>
+                <p class="basic_text">
                   Ah, se a maioria acha que é verdade, então deve mesmo ser
                   verdade!
                 </p>
               </label>
               <label class="labels">
-                <input class="inputs" type="checkbox" name="" id="" value="B"/>
-                <span class="basic_title">B.</span><p class="basic_text">
+                <input class="inputs" type="checkbox" name="" id="" value="B" />
+                <span class="basic_title">B.</span>
+                <p class="basic_text">
                   Você viu aquela atriz famosa que fez propaganda daquele
                   hidratante? Com certeza deve ser ótimo!
                 </p>
               </label>
               <label class="labels">
-                <input class="inputs" type="checkbox" name="" id="" value="C"/>
-                <span class="basic_title">C.</span><p class="basic_text">
+                <input class="inputs" type="checkbox" name="" id="" value="C" />
+                <span class="basic_title">C.</span>
+                <p class="basic_text">
                   Professora, por favor, preciso passar de ano! Eu não fui bem
                   na prova aquele dia porque eu tive um pesadelo! Você já teve
                   um pesadelo? Viu como é horrível? Então! Eu preciso de nota,
@@ -52,8 +59,9 @@
                 </p>
               </label>
               <label class="labels">
-                <input class="inputs" type="checkbox" name="" id="" value="D"/>
-                <span class="basic_title">D.</span><p class="basic_text">
+                <input class="inputs" type="checkbox" name="" id="" value="D" />
+                <span class="basic_title">D.</span>
+                <p class="basic_text">
                   Se você não concordar comigo eu vou te bater, ouviu bem?
                 </p>
               </label>
@@ -61,20 +69,47 @@
 
             <fieldset class="main_section_game_form_answers">
               <label class="labels">
-                <span class="basic_title">--.</span><input value="1" class="inputs" type="checkbox"
-                 name="" id="option1" />
+                <span class="basic_title">--.</span
+                ><input
+                  value="1"
+                  class="inputs"
+                  type="checkbox"
+                  name=""
+                  id="option1"
+                />
                 <p class="basic_text">Recurso à força.</p>
               </label>
               <label class="labels">
-                <span class="basic_title">--.</span><input value="2" class="inputs" type="checkbox" name="" id="" />
+                <span class="basic_title">--.</span
+                ><input
+                  value="2"
+                  class="inputs"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
                 <p class="basic_text">Argumento por apelo à piedade.</p>
               </label>
               <label class="labels">
-                <span class="basic_title">--.</span><input value="3" class="inputs" type="checkbox" name="" id="" />
+                <span class="basic_title">--.</span
+                ><input
+                  value="3"
+                  class="inputs"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
                 <p class="basic_text">Recurso à autoridade.</p>
               </label>
               <label class="labels">
-                <span class="basic_title">--.</span><input value="4" class="inputs" type="checkbox" name="" id="" />
+                <span class="basic_title">--.</span
+                ><input
+                  value="4"
+                  class="inputs"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
                 <p class="basic_text">Argumento por apelo ao povo.</p>
               </label>
             </fieldset>
@@ -87,15 +122,39 @@
       </section>
 
       <section id="sectionEnd" class="main_section_end hide">
-        <h1 class="basic_title main_section_end_title">
-            Seu resultado foi...
-        </h1>
+        <h1 class="basic_title main_section_end_title">Seu resultado foi...</h1>
 
-        <h2 class="basic_text">
-          --
-        </h2>
+        <h2 class="basic_text">--</h2>
 
-        <button type="submit" id="buttonRestart" class="buttons main_section_end_button">Reiniciar</button>
+        <button
+          type="submit"
+          id="buttonRestart"
+          class="buttons main_section_end_button"
+        >
+          Reiniciar
+        </button>
+      </section>
+
+      <section id="sectionCredits" class="main_section_credits hide">
+        <h1 class="basic_title main_section_end_title">Feito por:</h1>
+
+        <p class="basic_text">Leona Christen</p>
+
+        <p class="basic_text">
+          Confira o
+          <a href="https://github.com/christenLeo/teste_vaga_designerII_arco"
+            >Repositório</a
+          >
+          desse projeto no GitHub
+        </p>
+
+        <button
+          type="button"
+          id="buttonGoBack"
+          class="buttons main_section_end_button"
+        >
+          Voltar
+        </button>
       </section>
     </main>
 
