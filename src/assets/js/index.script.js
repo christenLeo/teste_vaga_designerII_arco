@@ -60,7 +60,7 @@ const verifyGame = () => {
     finalText = `Parabéns, você gabaritou!\n${right} acertos de 4 questões`;
   }
 
-  if (right >= wrong) {
+  if (right = wrong) {
     finalText = `Quase lá, vamos estudar um pouco mais e na próxima você consegue!\n${right} acertos de 4 questões`;
   }
 
